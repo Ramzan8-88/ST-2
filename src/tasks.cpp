@@ -1,8 +1,9 @@
 // Copyright 2022 UNN-CS
-#include "circle.h"
 #include "tasks.h"
 
 #include <cmath>
+
+#include "circle.h"
 
 double calculateEarthGap() {
   const double EARTH_RADIUS_KM = 6378.1;
