@@ -1,6 +1,6 @@
 // Copyright 2022 UNN-CS
-#ifndef TASKS_H
-#define TASKS_H
+#ifndef INCLUDE_TASKS_H_
+#define INCLUDE_TASKS_H_
 
 double calculateEarthGap();
 
@@ -12,4 +12,4 @@ struct PoolCosts {
 
 PoolCosts calculatePoolCosts();
 
-#endif // TASKS_H
+#endif

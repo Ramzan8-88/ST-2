@@ -7,7 +7,6 @@
 #include <cmath>
 #include <stdexcept>
 
-
 TEST(CircleTest, DefaultConstructor) {
     Circle c;
     EXPECT_DOUBLE_EQ(c.getRadius(), 0.0);
@@ -91,10 +90,8 @@ TEST(CircleTest, SequentialUpdates) {
     Circle c;
     c.setRadius(2.0);
     double area1 = c.getArea();
-
     c.setFerence(c.getFerence() * 2);
     EXPECT_GT(c.getArea(), area1);
-
     c.setArea(c.getArea() / 4);
     EXPECT_DOUBLE_EQ(c.getRadius(), 2.0);
 }
@@ -104,11 +101,9 @@ TEST(CircleTest, MathematicalConsistency) {
     double r = c.getRadius();
     double f = c.getFerence();
     double a = c.getArea();
-
     EXPECT_DOUBLE_EQ(f, 2 * M_PI * r);
     EXPECT_DOUBLE_EQ(a, M_PI * r * r);
 }
-
 
 TEST(EarthGapTest, PositiveGap) {
     double gap = calculateEarthGap();
@@ -137,7 +132,6 @@ TEST(EarthGapTest, GapIndependence) {
     EXPECT_GT(gap, 0.15);
     EXPECT_LT(gap, 0.16);
 }
-
 
 TEST(PoolCostsTest, PositiveCosts) {
     PoolCosts costs = calculatePoolCosts();
@@ -168,7 +162,6 @@ TEST(PoolCostsTest, CostRatio) {
     EXPECT_GT(costs.fenceCost, costs.pavementCost);
     EXPECT_LT(costs.fenceCost / costs.pavementCost, 3.0);
 }
-
 
 TEST(CircleTest, CopyOperations) {
     Circle c1(5.0);
@@ -203,7 +196,6 @@ TEST(CircleTest, PrecisionTest) {
 TEST(PoolCostsTest, ConsistencyWithCircle) {
     Circle pool(3.0);
     Circle poolWithPath(4.0);
-
     PoolCosts costs = calculatePoolCosts();
     double expectedPathArea = poolWithPath.getArea() - pool.getArea();
     EXPECT_NEAR(costs.pavementCost / 1000.0, expectedPathArea, 1e-6);
@@ -214,4 +206,3 @@ TEST(EarthGapTest, CalculationMethod) {
     double expectedGap = 1.0 / (2 * M_PI);
     EXPECT_NEAR(gap, expectedGap, 1e-6);
 }
-
