@@ -1,9 +1,9 @@
 // Copyright 2025 UNN-CS Team
 
-#include "circle.h"           
-#include "tasks.h"            
+#include "circle.h"
+#include "tasks.h"
 
-#include <gtest/gtest.h>       
+#include <gtest/gtest.h>
 #include <cmath>
 #include <stdexcept>
 
