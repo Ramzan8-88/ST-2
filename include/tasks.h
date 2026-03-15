@@ -5,11 +5,11 @@
 double calculateEarthGap();
 
 struct PoolCosts {
-    double pavementCost;
-    double fenceCost;
-    double totalCost;
+	double pavementCost;
+	double fenceCost;
+	double totalCost;
 };
 
 PoolCosts calculatePoolCosts();
 
-#endif
+#endif  // INCLUDE_TASKS_H_
